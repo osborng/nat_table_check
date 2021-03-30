@@ -16,19 +16,19 @@ import sched, time
 import os
 
 # Define some variables
-rg_ip = '192.168.1.254' # Residential gateway management IP address
-rg_password = 'YOUR_RG_PASSWORD' # password needed to login to RG
-max_sessions = 1500 # Maximum sessions permitted before a reset/clear is triggered
+#rg_ip = '192.168.1.254' # Residential gateway management IP address
+#rg_password = 'YOUR_RG_PASSWORD' # password needed to login to RG
+#max_sessions = 1500 # Maximum sessions permitted before a reset/clear is triggered
 
 #### 
 # This section is related to K8S configuration variables
 # Remark these lines out if you are not utilizing K8S and
 # uncomment the variables above
 ###  
-#rg_password = os.environ['rg_password'] # Replaces the original rg_password when running in K8S (secrets used instead)
-#rg_ip = os.environ['rg_address'] # Replaces the original rg_ip when running in K8S (Configmap used instead)
-#max_sessions_str = os.environ['max_sessions'] # Replaces the original max_sessions when running in K8S (Configmap used instead)
-#max_sessions = int(max_sessions_str)
+rg_password = os.environ['rg_password'] # Replaces the original rg_password when running in K8S (secrets used instead)
+rg_ip = os.environ['rg_address'] # Replaces the original rg_ip when running in K8S (Configmap used instead)
+max_sessions_str = os.environ['max_sessions'] # Replaces the original max_sessions when running in K8S (Configmap used instead)
+max_sessions = int(max_sessions_str)
 #### End K8S section
 
 
