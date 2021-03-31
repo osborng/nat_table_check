@@ -9,11 +9,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * Python 3.8 or higher
+* python3-pip
 * splinter (if not using the v2 script)
 * selenium
 * Firefox gecko driver
 * Firefox
-* python3-pip
 
 ### Installing
 
